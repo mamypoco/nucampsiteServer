@@ -111,7 +111,7 @@ campsiteRouter
                   .then((campsite) => {
                      res.statusCode = 200;
                      res.setHeader("Content-Type", "application/json");
-                     res.json(campsite.comments);
+                     res.json(campsite);
                   })
                   .catch((err) => next(err));
             } else {
@@ -141,7 +141,7 @@ campsiteRouter
                   .then((campsite) => {
                      res.statusCode = 200;
                      res.setHeader("Content-Type", "application/json");
-                     res.json(campsite.comments);
+                     res.json(campsite);
                   })
                   .catch((err) => next(err));
             } else {
