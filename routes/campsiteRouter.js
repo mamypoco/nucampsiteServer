@@ -7,7 +7,6 @@ const cors = require("./cors");
 campsiteRouter
    .route("/") // this is for /campsites path
    .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
-
    .get(cors.cors, (req, res, next) => {
       Campsite.find()
          .populate("comments.author")
